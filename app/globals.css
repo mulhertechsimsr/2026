@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+/* ===== Base CSS variables (brand defaults) ===== */
+:root {
+  --purple-900: #14082e;
+  --purple-800: #1f0f47;
+  --purple-700: #2d1b5e;
+  --purple-600: #4a2e8e;
+  --purple-500: #6b4bc4;
+
+  --coral-500: #f0844a;
+  --coral-400: #f4a06d;
+  --coral-300: #f8c29a;
+
+  --teal-700: #0d5c57;
+  --teal-600: #0f7570;
+  --teal-500: #14998a;
+  --teal-400: #5dbfb5;
+
+  --pink-500: #e2487a;
+  --pink-400: #eb6e96;
+
+  --cream-50: #ffffff;
+  --cream-100: #f4f7f6;
+  --cream-200: #e2ebe9;
+
+  --ink-900: #0f2a28;
+  --ink-700: #2e4f4b;
+  --ink-500: #5e7b77;
+  --ink-300: #a6bab7;
+
+  --font-display: var(--font-bricolage);
+  --font-body: var(--font-manrope);
+  --font-mono: var(--font-jetbrains);
+}
+
+/* ===== Edition 2026 theme — scoped via data-theme="2026" ===== */
+[data-theme="2026"] {
+  --purple-900: #0d1159;
+  --purple-800: #241a5e;
+  --purple-700: #4c2f71;
+  --purple-600: #6b4899;
+  --purple-500: #812499;
+
+  --coral-500: #ff914d;
+  --coral-400: #ffa96d;
+  --coral-300: #ffc49a;
+
+  --teal-700: #0d1159;
+  --teal-600: #3fa3a8;
+  --teal-500: #5fbdc2;
+  --teal-400: #82cdd1;
+
+  --pink-500: #812499;
+  --pink-400: #9d3bb5;
+}
+
+/* ===== Tailwind v4 theme tokens ===== */
+@theme inline {
+  --color-purple-900: var(--purple-900);
+  --color-purple-800: var(--purple-800);
+  --color-purple-700: var(--purple-700);
+  --color-purple-600: var(--purple-600);
+  --color-purple-500: var(--purple-500);
+
+  --color-coral-500: var(--coral-500);
+  --color-coral-400: var(--coral-400);
+  --color-coral-300: var(--coral-300);
+
+  --color-teal-700: var(--teal-700);
+  --color-teal-600: var(--teal-600);
+  --color-teal-500: var(--teal-500);
+  --color-teal-400: var(--teal-400);
+
+  --color-pink-500: var(--pink-500);
+  --color-pink-400: var(--pink-400);
+
+  --color-cream-50: var(--cream-50);
+  --color-cream-100: var(--cream-100);
+  --color-cream-200: var(--cream-200);
+
+  --color-ink-900: var(--ink-900);
+  --color-ink-700: var(--ink-700);
+  --color-ink-500: var(--ink-500);
+  --color-ink-300: var(--ink-300);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+
+  --radius-btn: 999px;
+  --radius-card: 20px;
+  --radius-card-lg: 28px;
+  --radius-input: 12px;
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ===== Animations ===== */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 40s linear infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-spin-slow,
+  .animate-twinkle {
+    animation: none;
+  }
+}
+
+/* ===== Smooth scrolling ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Container helpers ===== */
+.dados-container {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.dados-container-wide {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.dados-container-narrow {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}

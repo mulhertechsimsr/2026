@@ -36,6 +36,7 @@ function CountUnit({ value, label }: { value: number | null; label: string }) {
   return (
     <div style={{ textAlign: "center" }}>
       <div
+        className="countdown-num"
         style={{
           fontFamily: "var(--font-display)",
           fontSize: 72,
@@ -86,17 +87,13 @@ export default function SaveDate() {
       />
 
       <div
-        className="relative m-pad m-stack"
+        className="relative m-pad savedate-grid"
         style={{
           maxWidth: 1240,
           marginLeft: "auto",
           marginRight: "auto",
           paddingLeft: 32,
           paddingRight: 32,
-          display: "grid",
-          gridTemplateColumns: "1fr auto",
-          gap: 60,
-          alignItems: "center",
         }}
       >
         <div>
@@ -154,16 +151,7 @@ export default function SaveDate() {
         </div>
 
         {/* Countdown */}
-        <div
-          className="m-full"
-          style={{
-            background: "var(--purple-800)",
-            padding: "40px 48px",
-            borderRadius: 24,
-            minWidth: 340,
-            boxShadow: "0 20px 60px -20px rgba(0,0,0,0.4)",
-          }}
-        >
+        <div className="countdown-box">
           <div
             style={{
               fontFamily: "var(--font-mono)",

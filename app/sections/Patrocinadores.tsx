@@ -105,12 +105,8 @@ export default function Patrocinadores() {
 
         {/* Media kit CTA */}
         <div
-          className="m-stack"
+          className="mediakit-grid"
           style={{
-            display: "grid",
-            gridTemplateColumns: "1fr auto",
-            alignItems: "center",
-            gap: 32,
             padding: 36,
             borderRadius: 20,
             background:

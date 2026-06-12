@@ -81,17 +81,13 @@ export default function Tema() {
       }}
     >
       <div
-        className="relative m-pad m-stack"
+        className="relative m-pad tema-grid"
         style={{
           maxWidth: 1240,
           marginLeft: "auto",
           marginRight: "auto",
           paddingLeft: 32,
           paddingRight: 32,
-          display: "grid",
-          gridTemplateColumns: "1fr 1.5fr",
-          gap: 80,
-          alignItems: "start",
         }}
       >
         {/* Sticky left */}

@@ -63,17 +63,13 @@ export default function Hero() {
       />
 
       <div
-        className="relative m-pad m-stack"
+        className="relative m-pad hero-grid"
         style={{
           maxWidth: 1240,
           marginLeft: "auto",
           marginRight: "auto",
           paddingLeft: 32,
           paddingRight: 32,
-          display: "grid",
-          gridTemplateColumns: "1.3fr 1fr",
-          gap: 60,
-          alignItems: "center",
         }}
       >
         {/* Left column */}
@@ -178,16 +174,7 @@ export default function Hero() {
           </div>
 
           {/* Meta grid */}
-          <div
-            className="m-meta"
-            style={{
-              marginTop: 56,
-              display: "grid",
-              gridTemplateColumns: "repeat(4, auto)",
-              gap: "0 48px",
-              justifyContent: "start",
-            }}
-          >
+          <div className="hero-meta">
             <HeroMeta label="QUANDO" value="01 de agosto, sáb" />
             <HeroMeta label="ONDE" value="[Local — em breve]" />
             <HeroMeta label="DURAÇÃO" value="09h às 19h" />
@@ -197,8 +184,7 @@ export default function Hero() {
 
         {/* Right column — logo */}
         <div
-          className="relative m-hide"
-          style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+          className="hero-logo-col"
         >
           {/* Radial glow */}
           <div

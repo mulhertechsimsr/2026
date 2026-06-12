@@ -41,16 +41,7 @@ export default function Trilhas() {
           paddingRight: 32,
         }}
       >
-        <div
-          className="m-col"
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
-            gap: 40,
-            marginBottom: 56,
-          }}
-        >
+        <div className="trilhas-header">
           <div>
             <div
               style={{
@@ -88,10 +79,7 @@ export default function Trilhas() {
         </div>
 
         {/* Cards grid */}
-        <div
-          className="m-1col"
-          style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}
-        >
+        <div className="trilhas-grid">
           {TRILHAS.map((t) => (
             <div
               key={t.tag}

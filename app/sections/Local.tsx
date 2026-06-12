@@ -32,17 +32,13 @@ export default function Local() {
       style={{ padding: "100px 0", background: "var(--purple-900)" }}
     >
       <div
-        className="m-pad m-stack"
+        className="m-pad local-grid"
         style={{
           maxWidth: 1240,
           marginLeft: "auto",
           marginRight: "auto",
           paddingLeft: 32,
           paddingRight: 32,
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 60,
-          alignItems: "center",
         }}
       >
         <div>

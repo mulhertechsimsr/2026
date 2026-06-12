@@ -10,13 +10,17 @@ const EVENT_LINKS = [
   { label: "Patrocinadores", href: "/#patrocinadores" },
 ];
 const CONTACT_LINKS = [
-  "mulhertechsimsr@gmail.com",
-  "João Pessoa, PB",
-  "@mulhertechsimsenhor",
-  "Parcerias",
+  { label: "mulhertechsimsr@gmail.com", href: "mailto:mulhertechsimsr@gmail.com" },
+  { label: "João Pessoa, PB", href: "#" },
+  { label: "@mulhertechsimsr", href: "https://www.instagram.com/mulhertechsimsr/" },
+  { label: "Parcerias", href: "mailto:mulhertechsimsr@gmail.com" },
 ];
-const SOCIALS = ["I", "L", "Y", "D"];
-const SOCIAL_LABELS = ["Instagram", "LinkedIn", "YouTube", "Discord"];
+const SOCIALS = [
+  { label: "Instagram", abbr: "Ins", href: "https://www.instagram.com/mulhertechsimsr/" },
+  { label: "LinkedIn", abbr: "in", href: "https://www.linkedin.com/company/mulher-tech-sim-senhor/" },
+  { label: "Facebook", abbr: "fb", href: "https://www.facebook.com/wtmjp/" },
+  { label: "Spotify", abbr: "♫", href: "https://open.spotify.com/playlist/1uE56UMEpZ4rAEV7paMPyx" },
+];
 
 export default function Footer() {
   return (
@@ -37,15 +41,7 @@ export default function Footer() {
           paddingBottom: 40,
         }}
       >
-        <div
-          className="m-1col"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "2fr 1fr 1fr 1fr",
-            gap: 48,
-            marginBottom: 64,
-          }}
-        >
+        <div className="footer-grid">
           <div>
             <Wordmark chip />
             <p
@@ -61,26 +57,30 @@ export default function Footer() {
               dedicada a conectar, formar e celebrar mulheres na tecnologia.
             </p>
             <div style={{ display: "flex", gap: 10, marginTop: 24 }}>
-              {SOCIALS.map((s, i) => (
+              {SOCIALS.map((s) => (
                 <a
-                  key={s}
-                  href="#"
-                  aria-label={SOCIAL_LABELS[i]}
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
                   style={{
-                    width: 38,
                     height: 38,
-                    borderRadius: "50%",
+                    padding: "0 12px",
+                    borderRadius: 9999,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     background: "rgba(255,255,255,0.08)",
-                    fontSize: 12,
-                    fontWeight: 600,
+                    fontSize: 11,
+                    fontWeight: 700,
                     color: "white",
                     textDecoration: "none",
+                    letterSpacing: "0.02em",
+                    whiteSpace: "nowrap" as const,
                   }}
                 >
-                  {s}
+                  {s.abbr}
                 </a>
               ))}
             </div>
@@ -91,10 +91,7 @@ export default function Footer() {
             links={COMMUNITY_LINKS.map((l) => ({ label: l, href: "#" }))}
           />
           <FooterCol title="Evento" links={EVENT_LINKS} />
-          <FooterCol
-            title="Contato"
-            links={CONTACT_LINKS.map((l) => ({ label: l, href: "#" }))}
-          />
+          <FooterCol title="Contato" links={CONTACT_LINKS} />
         </div>
 
         <div
@@ -107,11 +104,11 @@ export default function Footer() {
             gap: 8,
             fontSize: 12,
             color: "rgba(255,255,255,0.4)",
+            flexWrap: "wrap" as const,
           }}
         >
           <span>
-            © 2026 Mulher Tech Sim Senhor · Associação sem fins lucrativos ·
-            CNPJ XX.XXX.XXX/0001-XX
+            © 2026 Mulher Tech Sim Senhor · Associação sem fins lucrativos
           </span>
           <span>feito com 🧡 pela comunidade</span>
         </div>

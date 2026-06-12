@@ -65,6 +65,7 @@ export default function Trilhas() {
               O QUE VAI ROLAR
             </div>
             <h2
+              className="m-h2"
               style={{
                 fontFamily: "var(--font-display)",
                 fontSize: 64,
@@ -88,7 +89,7 @@ export default function Trilhas() {
 
         {/* Cards grid */}
         <div
-          className="m-2col"
+          className="m-1col"
           style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}
         >
           {TRILHAS.map((t) => (

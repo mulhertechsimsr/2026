@@ -88,6 +88,7 @@ export default function Patrocinadores() {
                 </div>
               </div>
               <div
+                className="sponsor-grid"
                 style={{
                   display: "grid",
                   gridTemplateColumns: `repeat(${t.count}, 1fr)`,

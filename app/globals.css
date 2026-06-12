@@ -241,4 +241,7 @@ html {
     min-width: 0 !important;
     width: 100% !important;
   }
+  .sponsor-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }

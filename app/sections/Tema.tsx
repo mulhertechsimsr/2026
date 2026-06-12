@@ -109,6 +109,7 @@ export default function Tema() {
             POR QUE DADOS
           </div>
           <h2
+            className="m-h2"
             style={{
               fontFamily: "var(--font-display)",
               fontSize: 64,

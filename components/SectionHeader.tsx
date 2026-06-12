@@ -30,6 +30,7 @@ export default function SectionHeader({ eyebrow, title, subtitle, align = "left"
         {eyebrow}
       </div>
       <h2
+        className="m-h2"
         style={{
           fontFamily: "var(--font-display)",
           fontSize: 56,

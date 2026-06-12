@@ -119,6 +119,7 @@ export default function Hero() {
 
           {/* Eyebrow */}
           <div
+            className="hero-eyebrow"
             style={{
               fontFamily: "var(--font-display)",
               fontSize: 24,
@@ -149,6 +150,7 @@ export default function Hero() {
           </h1>
 
           <p
+            className="hero-desc"
             style={{
               fontSize: 22,
               lineHeight: 1.45,
@@ -162,7 +164,7 @@ export default function Hero() {
             queremos remodelá-los de volta.
           </p>
 
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
+          <div className="hero-buttons">
             <Link href="/inscricao">
               <Button variant="coral">
                 Garantir minha vaga <span>→</span>

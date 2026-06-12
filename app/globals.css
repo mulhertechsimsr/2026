@@ -262,6 +262,11 @@ html {
   justify-content: center;
   position: relative;
 }
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
 .countdown-box {
   background: var(--purple-800);
   padding: 40px 48px;
@@ -294,4 +299,9 @@ html {
   .countdown-num { font-size: 52px; }
   .hero-logo-col { display: none; }
   .hero-meta { grid-template-columns: repeat(2, auto); gap: 16px 24px; }
+  .hero-buttons { flex-direction: column; gap: 12px; }
+  .hero-buttons a { width: 100%; display: flex; }
+  .hero-buttons a button { width: 100%; justify-content: center; }
+  .hero-desc { font-size: 17px !important; line-height: 1.5 !important; }
+  .hero-eyebrow { font-size: 18px !important; }
 }

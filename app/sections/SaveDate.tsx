@@ -87,6 +87,8 @@ export default function SaveDate() {
 
       <div
         className="relative"
+        data-m-pad
+        data-m-stack
         style={{
           maxWidth: 1240,
           marginLeft: "auto",
@@ -155,6 +157,7 @@ export default function SaveDate() {
 
         {/* Countdown */}
         <div
+          data-m-full
           style={{
             background: "var(--purple-800)",
             padding: "40px 48px",

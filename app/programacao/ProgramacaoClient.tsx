@@ -287,7 +287,7 @@ function ScheduleGroups({ items }: { items: Session[] }) {
           className="py-5"
           style={{
             display: "grid",
-            gridTemplateColumns: "120px 1fr",
+            gridTemplateColumns: "80px 1fr",
             gap: 32,
             borderTop:
               gi > 0 ? "1px solid rgba(255,255,255,0.06)" : undefined,
@@ -361,6 +361,7 @@ export default function ProgramacaoClient() {
         <Constellation density={50} color="rgba(255,255,255,0.5)" />
         <div
           className="relative"
+          data-m-pad
           style={{ maxWidth: 1240, marginLeft: "auto", marginRight: "auto", paddingLeft: 32, paddingRight: 32 }}
         >
           <div
@@ -436,7 +437,7 @@ export default function ProgramacaoClient() {
 
       {/* Schedule */}
       <section style={{ padding: "40px 0 120px" }}>
-        <div style={{ maxWidth: 900, marginLeft: "auto", marginRight: "auto", paddingLeft: 32, paddingRight: 32 }}>
+        <div data-m-pad style={{ maxWidth: 900, marginLeft: "auto", marginRight: "auto", paddingLeft: 32, paddingRight: 32 }}>
           <ScheduleGroups items={filtered} />
         </div>
       </section>

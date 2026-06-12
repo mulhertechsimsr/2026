@@ -194,3 +194,61 @@ html {
   padding-left: 32px;
   padding-right: 32px;
 }
+
+/* ===== Mobile responsive (data-attribute overrides) ===== */
+@media (max-width: 767px) {
+  /* Reduce container padding */
+  [data-m-pad] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  /* Reduce section vertical padding */
+  [data-m-section] {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+  /* Stack any grid to 1 column */
+  [data-m-stack] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  /* Stack flex row to column */
+  [data-m-col] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 24px !important;
+  }
+  /* 2-column grid on mobile */
+  [data-m-2col] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  /* 1-column grid on mobile */
+  [data-m-1col] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  /* Hide element on mobile */
+  [data-m-hide] {
+    display: none !important;
+  }
+  /* Meta items: 2-column */
+  [data-m-meta] {
+    grid-template-columns: repeat(2, auto) !important;
+    gap: 16px 24px !important;
+  }
+  /* Hero title font size */
+  [data-m-hero-title] {
+    font-size: clamp(52px, 14vw, 80px) !important;
+    line-height: 0.88 !important;
+  }
+  /* Section h2 font size */
+  [data-m-h2] {
+    font-size: clamp(28px, 9vw, 48px) !important;
+    line-height: 1 !important;
+  }
+  /* Full width on mobile */
+  [data-m-full] {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+}

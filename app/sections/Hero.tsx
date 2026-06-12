@@ -28,6 +28,7 @@ export default function Hero() {
   return (
     <section
       className="relative overflow-hidden"
+      data-m-section
       style={{ minHeight: 760, padding: "80px 0 120px" }}
     >
       <Constellation
@@ -64,6 +65,8 @@ export default function Hero() {
 
       <div
         className="relative"
+        data-m-pad
+        data-m-stack
         style={{
           maxWidth: 1240,
           marginLeft: "auto",
@@ -138,6 +141,7 @@ export default function Hero() {
 
           {/* Title */}
           <h1
+            data-m-hero-title
             style={{
               fontFamily: "var(--font-display)",
               fontSize: "clamp(72px, 13vw, 180px)",
@@ -178,6 +182,7 @@ export default function Hero() {
 
           {/* Meta grid */}
           <div
+            data-m-meta
             style={{
               marginTop: 56,
               display: "grid",
@@ -196,6 +201,7 @@ export default function Hero() {
         {/* Right column — logo */}
         <div
           className="relative"
+          data-m-hide
           style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
         >
           {/* Radial glow */}

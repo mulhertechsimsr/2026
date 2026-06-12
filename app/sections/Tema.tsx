@@ -81,9 +81,7 @@ export default function Tema() {
       }}
     >
       <div
-        className="relative"
-        data-m-pad
-        data-m-stack
+        className="relative m-pad m-stack"
         style={{
           maxWidth: 1240,
           marginLeft: "auto",

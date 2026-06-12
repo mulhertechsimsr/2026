@@ -32,7 +32,7 @@ export default function Trilhas() {
   return (
     <section style={{ padding: "120px 0", background: "var(--purple-800)" }}>
       <div
-        data-m-pad
+        className="m-pad"
         style={{
           maxWidth: 1240,
           marginLeft: "auto",
@@ -42,7 +42,7 @@ export default function Trilhas() {
         }}
       >
         <div
-          data-m-col
+          className="m-col"
           style={{
             display: "flex",
             justifyContent: "space-between",
@@ -88,7 +88,7 @@ export default function Trilhas() {
 
         {/* Cards grid */}
         <div
-          data-m-2col
+          className="m-2col"
           style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}
         >
           {TRILHAS.map((t) => (

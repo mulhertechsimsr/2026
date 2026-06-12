@@ -37,7 +37,7 @@ export default function Patrocinadores() {
       style={{ padding: "100px 0", background: "var(--purple-800)" }}
     >
       <div
-        data-m-pad
+        className="m-pad"
         style={{
           maxWidth: 1240,
           marginLeft: "auto",
@@ -104,7 +104,7 @@ export default function Patrocinadores() {
 
         {/* Media kit CTA */}
         <div
-          data-m-stack
+          className="m-stack"
           style={{
             display: "grid",
             gridTemplateColumns: "1fr auto",

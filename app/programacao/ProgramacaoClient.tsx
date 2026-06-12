@@ -360,8 +360,7 @@ export default function ProgramacaoClient() {
       >
         <Constellation density={50} color="rgba(255,255,255,0.5)" />
         <div
-          className="relative"
-          data-m-pad
+          className="relative m-pad"
           style={{ maxWidth: 1240, marginLeft: "auto", marginRight: "auto", paddingLeft: 32, paddingRight: 32 }}
         >
           <div
@@ -437,7 +436,7 @@ export default function ProgramacaoClient() {
 
       {/* Schedule */}
       <section style={{ padding: "40px 0 120px" }}>
-        <div data-m-pad style={{ maxWidth: 900, marginLeft: "auto", marginRight: "auto", paddingLeft: 32, paddingRight: 32 }}>
+        <div className="m-pad" style={{ maxWidth: 900, marginLeft: "auto", marginRight: "auto", paddingLeft: 32, paddingRight: 32 }}>
           <ScheduleGroups items={filtered} />
         </div>
       </section>

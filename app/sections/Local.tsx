@@ -32,8 +32,7 @@ export default function Local() {
       style={{ padding: "100px 0", background: "var(--purple-900)" }}
     >
       <div
-        data-m-pad
-        data-m-stack
+        className="m-pad m-stack"
         style={{
           maxWidth: 1240,
           marginLeft: "auto",

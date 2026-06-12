@@ -26,8 +26,7 @@ export default function Footer() {
     >
       <Constellation density={25} />
       <div
-        className="relative"
-        data-m-pad
+        className="relative m-pad"
         style={{
           maxWidth: 1240,
           marginLeft: "auto",
@@ -39,7 +38,7 @@ export default function Footer() {
         }}
       >
         <div
-          data-m-1col
+          className="m-1col"
           style={{
             display: "grid",
             gridTemplateColumns: "2fr 1fr 1fr 1fr",

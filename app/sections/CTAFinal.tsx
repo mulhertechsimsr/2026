@@ -10,8 +10,7 @@ export default function CTAFinal() {
     >
       <Constellation density={60} color="rgba(255,255,255,0.5)" />
       <div
-        className="relative"
-        data-m-pad
+        className="relative m-pad"
         style={{
           maxWidth: 1240,
           marginLeft: "auto",

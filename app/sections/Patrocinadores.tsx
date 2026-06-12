@@ -138,9 +138,11 @@ export default function Patrocinadores() {
               impacto das edições anteriores.
             </p>
           </div>
-          <Button variant="coral">
-            Baixar media kit <span>↓</span>
-          </Button>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Button variant="coral">
+              Baixar media kit <span>↓</span>
+            </Button>
+          </div>
         </div>
       </div>
     </section>

@@ -145,8 +145,8 @@ export default function SaveDate() {
             workshops são limitadas e os ingressos das edições anteriores
             esgotaram em até 72h.
           </p>
-          <Link href="https://doity.com.br/mulher-tech-sim-senhor-2026">
-            <Button variant="white">Quero ser avisada quando abrir</Button>
+          <Link href="https://doity.com.br/mulher-tech-sim-senhor-2026" target="_blank" rel="noopener noreferrer">
+            <Button variant="white">Inscreva-se <span>→</span></Button>
           </Link>
         </div>
 

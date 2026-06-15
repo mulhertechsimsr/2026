@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SectionHeader from "@/components/SectionHeader";
 import Button from "@/components/Button";
 
@@ -24,32 +25,6 @@ export default function Patrocinadores() {
           align="left"
         />
 
-        <div
-          style={{
-            padding: "48px 40px",
-            borderRadius: 20,
-            background: "rgba(255,255,255,0.03)",
-            border: "1px dashed rgba(255,255,255,0.12)",
-            textAlign: "center",
-            marginBottom: 32,
-          }}
-        >
-          <div
-            style={{
-              fontFamily: "var(--font-mono)",
-              fontSize: 11,
-              textTransform: "uppercase",
-              letterSpacing: "0.16em",
-              color: "rgba(255,255,255,0.35)",
-              marginBottom: 12,
-            }}
-          >
-            EM BREVE
-          </div>
-          <p style={{ fontSize: 15, color: "rgba(255,255,255,0.4)", maxWidth: 400, marginLeft: "auto", marginRight: "auto" }}>
-            Os patrocinadores da 11ª edição serão anunciados em breve.
-          </p>
-        </div>
 
         {/* Media kit CTA */}
         <div
@@ -87,9 +62,11 @@ export default function Patrocinadores() {
             </p>
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Button variant="coral">
-              Baixar media kit <span>↓</span>
-            </Button>
+            <Link href="/patrocinio.pdf" target="_blank" rel="noopener noreferrer">
+              <Button variant="coral">
+                Baixar media kit <span>↓</span>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

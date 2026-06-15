@@ -1,35 +1,6 @@
 import SectionHeader from "@/components/SectionHeader";
 import Button from "@/components/Button";
 
-const TIERS = [
-  { name: "DIAMANTE", count: 2, color: "var(--teal-400)", height: 100 },
-  { name: "OURO", count: 4, color: "var(--coral-400)", height: 78 },
-  { name: "PRATA", count: 6, color: "rgba(166,186,183,1)", height: 60 },
-];
-
-function ImgPlaceholder({ height }: { height: number }) {
-  return (
-    <div
-      style={{
-        height,
-        borderRadius: 12,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontSize: 11,
-        textTransform: "uppercase" as const,
-        background:
-          "repeating-linear-gradient(45deg, rgba(255,255,255,0.04), rgba(255,255,255,0.04) 8px, rgba(255,255,255,0.08) 8px, rgba(255,255,255,0.08) 16px)",
-        color: "rgba(255,255,255,0.5)",
-        fontFamily: "var(--font-mono)",
-        letterSpacing: "0.1em",
-      }}
-    >
-      logo
-    </div>
-  );
-}
-
 export default function Patrocinadores() {
   return (
     <section
@@ -53,55 +24,33 @@ export default function Patrocinadores() {
           align="left"
         />
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 40, marginBottom: 64 }}>
-          {TIERS.map((t) => (
-            <div key={t.name}>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 16,
-                  marginBottom: 16,
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: 11,
-                    textTransform: "uppercase",
-                    letterSpacing: "0.16em",
-                    fontWeight: 700,
-                    color: t.color,
-                  }}
-                >
-                  {t.name}
-                </div>
-                <div
-                  style={{
-                    flex: 1,
-                    height: 1,
-                    background: "rgba(255,255,255,0.1)",
-                  }}
-                />
-                <div style={{ fontSize: 12, color: "rgba(255,255,255,0.4)" }}>
-                  {t.count} cotas
-                </div>
-              </div>
-              <div
-                className="sponsor-grid"
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: `repeat(${t.count}, 1fr)`,
-                  gap: 16,
-                }}
-              >
-                {Array.from({ length: t.count }).map((_, j) => (
-                  <ImgPlaceholder key={j} height={t.height} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Em breve */}
+        {/* <div
+          style={{
+            padding: "48px 40px",
+            borderRadius: 20,
+            background: "rgba(255,255,255,0.03)",
+            border: "1px dashed rgba(255,255,255,0.12)",
+            textAlign: "center",
+            marginBottom: 32,
+          }}
+        >
+          <div
+            style={{
+              fontFamily: "var(--font-mono)",
+              fontSize: 11,
+              textTransform: "uppercase",
+              letterSpacing: "0.16em",
+              color: "rgba(255,255,255,0.35)",
+              marginBottom: 12,
+            }}
+          >
+            EM BREVE
+          </div>
+          <p style={{ fontSize: 15, color: "rgba(255,255,255,0.4)", maxWidth: 400, marginLeft: "auto", marginRight: "auto" }}>
+            Os patrocinadores da 11ª edição serão anunciados em breve.
+          </p>
+        </div> */}
 
         {/* Media kit CTA */}
         <div
@@ -125,7 +74,7 @@ export default function Patrocinadores() {
                 marginBottom: 8,
               }}
             >
-              Sua empresa nesta lista?
+              Quer sua empresa nessa lista?
             </h3>
             <p
               style={{

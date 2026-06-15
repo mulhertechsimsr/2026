@@ -62,7 +62,7 @@ export default function Patrocinadores() {
             </p>
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Link href="/patrocinio.pdf" target="_blank" rel="noopener noreferrer">
+            <Link href="https://drive.google.com/file/d/1HIcLq2tiZz3xSaf41J2XIel-MwLSqRnx/view?usp=sharing" target="_blank" rel="noopener noreferrer">
               <Button variant="coral">
                 Baixar media kit <span>↓</span>
               </Button>

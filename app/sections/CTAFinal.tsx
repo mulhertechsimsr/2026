@@ -58,7 +58,7 @@ export default function CTAFinal() {
         >
           Inscrição no evento + workshops à sua escolha. Vagas limitadas.
         </p>
-        <Link href="/inscricao">
+        <Link href="https://doity.com.br/mulher-tech-sim-senhor-2026">
           <Button variant="coral" size="lg">
             Quero minha inscrição <span>→</span>
           </Button>

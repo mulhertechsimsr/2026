@@ -165,7 +165,7 @@ export default function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <Link href="/inscricao">
+            <Link href="https://doity.com.br/mulher-tech-sim-senhor-2026">
               <Button variant="coral">
                 Garantir minha vaga <span>→</span>
               </Button>

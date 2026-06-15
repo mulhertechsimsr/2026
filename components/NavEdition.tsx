@@ -77,7 +77,7 @@ export default function NavEdition() {
           >
             ← Institucional
           </a>
-          <Link href="/inscricao" style={{ marginLeft: 12 }}>
+          <Link href="https://doity.com.br/mulher-tech-sim-senhor-2026" style={{ marginLeft: 12 }}>
             <Button variant="coral" size="sm">
               Inscreva-se
             </Button>

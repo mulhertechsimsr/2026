@@ -6,7 +6,7 @@ const COMMUNITY_LINKS = ["Sobre", "História", "Como participar", "Diretoria"];
 const EVENT_LINKS = [
   { label: "11ª Edição", href: "/" },
   { label: "Programação", href: "/programacao" },
-  { label: "Inscrição", href: "/inscricao" },
+  { label: "Inscrição", href: "https://doity.com.br/mulher-tech-sim-senhor-2026" },
   { label: "Patrocinadores", href: "/#patrocinadores" },
 ];
 const CONTACT_LINKS = [

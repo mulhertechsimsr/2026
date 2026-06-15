@@ -24,8 +24,7 @@ export default function Patrocinadores() {
           align="left"
         />
 
-        {/* Em breve */}
-        {/* <div
+        <div
           style={{
             padding: "48px 40px",
             borderRadius: 20,
@@ -50,7 +49,7 @@ export default function Patrocinadores() {
           <p style={{ fontSize: 15, color: "rgba(255,255,255,0.4)", maxWidth: 400, marginLeft: "auto", marginRight: "auto" }}>
             Os patrocinadores da 11ª edição serão anunciados em breve.
           </p>
-        </div> */}
+        </div>
 
         {/* Media kit CTA */}
         <div

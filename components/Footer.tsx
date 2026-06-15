@@ -2,7 +2,13 @@ import Link from "next/link";
 import Constellation from "./Constellation";
 import Wordmark from "./Wordmark";
 
-const COMMUNITY_LINKS = ["Sobre", "História", "Como participar", "Diretoria"];
+const COMMUNITY_LINKS = [
+  { label: "Site institucional", href: "http://mulhertechsimsr.com.br/" },
+  { label: "Sobre", href: "http://mulhertechsimsr.com.br/" },
+  { label: "História", href: "http://mulhertechsimsr.com.br/" },
+  { label: "Como participar", href: "http://mulhertechsimsr.com.br/" },
+  { label: "Diretoria", href: "http://mulhertechsimsr.com.br/" },
+];
 const EVENT_LINKS = [
   { label: "11ª Edição", href: "/" },
   { label: "Programação", href: "/programacao" },
@@ -115,10 +121,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <FooterCol
-            title="Comunidade"
-            links={COMMUNITY_LINKS.map((l) => ({ label: l, href: "#" }))}
-          />
+          <FooterCol title="Comunidade" links={COMMUNITY_LINKS} />
           <FooterCol title="Evento" links={EVENT_LINKS} />
           <FooterCol title="Contato" links={CONTACT_LINKS} />
         </div>

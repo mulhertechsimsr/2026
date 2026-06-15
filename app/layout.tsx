@@ -25,7 +25,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "11ª Edição · Dados — Mulher Tech Sim Senhor",
+  title: "11ª Edição · MTSS",
   description:
     "Um dia inteiro para falar sobre como dados, IA e cloud estão remodelando as carreiras femininas em tecnologia. 01 de agosto de 2026 · João Pessoa, PB.",
 };

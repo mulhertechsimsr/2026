@@ -221,6 +221,20 @@ html {
   gap: 60px;
   align-items: center;
 }
+.local-info {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: start;
+  gap: 24px 56px;
+}
+.local-map {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  /* O embed do Google vem em fundo claro — suaviza contra o roxo da seção */
+  filter: saturate(0.85);
+}
 .trilhas-header {
   display: flex;
   justify-content: space-between;
@@ -267,6 +281,102 @@ html {
   flex-wrap: wrap;
   gap: 14px;
 }
+/* ===== Programação ===== */
+.prog-timeline { --prog-time-col: 112px; }
+.prog-slot {
+  display: grid;
+  grid-template-columns: var(--prog-time-col) 1fr;
+  gap: 28px;
+  align-items: start;
+}
+/* Bloco com atividade contínua — colunas vêm inline (dependem do nº de salas) */
+.prog-group {
+  display: grid;
+  gap: 14px 28px;
+  align-items: stretch;
+}
+.prog-group .prog-time { align-self: start; }
+/* Célula do card contínuo: estica na altura das faixas que atravessa */
+.prog-span { display: flex; flex-direction: column; }
+.prog-span .prog-card { flex: 1; }
+/* No desktop o horário do card contínuo é redundante — a coluna já diz tudo */
+.prog-span .prog-time { display: none; }
+.prog-time {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 22px;
+}
+/* Cada slot abre exatamente tantas colunas quantas forem as salas em paralelo.
+   minmax(0, 1fr) impede que títulos longos estourem a coluna. */
+.prog-cards {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+}
+.prog-cards[data-cols="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.prog-cards[data-cols="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.prog-cards[data-cols="4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.prog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid var(--room);
+}
+.prog-card-title {
+  font-family: var(--font-display);
+  font-size: 21px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: white;
+  /* Só quebra palavra que realmente não cabe — hifenização automática produzia
+     cortes ruins ("Re-escrevendo", "Engenha-ria") em coluna estreita */
+  overflow-wrap: break-word;
+}
+.prog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.prog-card-cta {
+  margin-top: auto;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 9999px;
+  border: 1.5px solid currentColor;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: background 0.15s ease;
+}
+.prog-card-cta:hover { background: color-mix(in srgb, currentColor 14%, transparent); }
+
+/* Linhas cheias ficam apertadas: densifica só onde há 3+ salas simultâneas */
+@media (min-width: 1024px) {
+  .prog-cards[data-cols="3"] .prog-card,
+  .prog-cards[data-cols="4"] .prog-card { padding: 20px 18px; gap: 10px; }
+  .prog-cards[data-cols="4"] .prog-card-title { font-size: 17px; line-height: 1.2; }
+  .prog-cards[data-cols="3"] .prog-card-title { font-size: 19px; }
+}
+/* Tablet: 4 colunas não cabem — cai para 2, mantendo o par lado a lado */
+@media (max-width: 1023px) {
+  .prog-timeline { --prog-time-col: 92px; }
+  .prog-slot { gap: 20px; }
+  .prog-group { gap: 12px 20px; }
+  .prog-cards[data-cols="3"],
+  .prog-cards[data-cols="4"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 .countdown-box {
   background: var(--purple-800);
   padding: 40px 48px;
@@ -289,11 +399,53 @@ html {
   .savedate-grid { grid-template-columns: 1fr; gap: 32px; }
   .tema-grid     { grid-template-columns: 1fr; gap: 32px; }
   .local-grid    { grid-template-columns: 1fr; gap: 32px; }
+  .local-info    { gap: 20px 32px; }
+  .local-map     { aspect-ratio: 1 / 1; border-radius: 18px; }
   .trilhas-header { flex-direction: column; align-items: flex-start; gap: 24px; }
   .trilhas-grid  { grid-template-columns: 1fr; }
   .footer-grid   { grid-template-columns: 1fr; gap: 32px; }
   .mediakit-grid { grid-template-columns: 1fr; }
   .sponsor-grid  { grid-template-columns: repeat(2, 1fr); }
+
+  /* Mobile: uma coluna sempre — o horário vira cabeçalho da faixa */
+  .prog-slot { grid-template-columns: 1fr; gap: 10px; }
+  .prog-cards,
+  .prog-cards[data-cols="2"],
+  .prog-cards[data-cols="3"],
+  .prog-cards[data-cols="4"] { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .prog-time {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 8px;
+    padding: 0 0 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .prog-timeline { gap: 28px !important; }
+  .prog-card { padding: 18px; gap: 10px; border-radius: 16px; }
+  .prog-card-title { font-size: 19px; }
+
+  /* Sem colunas no mobile: o bloco vira pilha e o card contínuo sobe para o
+     topo, recuperando o horário próprio que o desktop esconde. */
+  .prog-group { display: flex; flex-direction: column; gap: 10px; }
+  /* Cada faixa reabre com seu horário; a margem separa faixas sem soltar o
+     horário do card que ele encabeça. */
+  .prog-group > .prog-time { margin-top: 18px; }
+  .prog-group > .prog-time:first-child { margin-top: 0; }
+  .prog-span { gap: 10px; }
+  .prog-span .prog-time { display: flex; }
+
+  /* Cinco chips estouram para 3 linhas: vira faixa rolável, sangrando na borda */
+  .prog-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 2px 20px 6px;
+  }
+  .prog-filters::-webkit-scrollbar { display: none; }
+  .prog-filters button { flex-shrink: 0; }
+  .prog-filters-label { display: none; }
 
   .countdown-box { padding: 28px 20px; min-width: 0; }
   .countdown-num { font-size: 52px; }

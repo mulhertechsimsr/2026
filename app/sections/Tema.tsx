@@ -1,23 +1,23 @@
 const BLOCKS = [
   {
     num: "01",
-    title: "Carreira de dados, sem cliché",
-    desc: "Engenharia, análise, ciência, governança. Conversamos sobre o que dá certo (e o que ninguém conta) em cada caminho.",
+    title: "Onde o dado vira trabalho",
+    desc: "Engenharia de dados com ferramentas open source, IA generativa nos pipelines e algoritmos resolvendo problemas biológicos. Do primeiro projeto ao portfólio.",
   },
   {
     num: "02",
-    title: "IA: hype, prática e responsabilidade",
-    desc: "Como mulheres em tech estão usando, criando e questionando modelos. Falamos do código ao impacto.",
+    title: "IA como colega, não como ameaça",
+    desc: "Copilot em todos os fluxos de trabalho, IA derrubando o mito da substituição no QA e a nuvem que sustenta os modelos. Ferramenta, com método.",
   },
   {
     num: "03",
-    title: "Cloud como base de tudo",
-    desc: "Arquitetura, custos, segurança. A infra que segura o resto — e por que ainda somos minoria nesse espaço.",
+    title: "O custo humano da automação",
+    desc: "Empatia sintética redesenhando a essência humana e o Overclock Humano: ser substituível pela IA e, ao mesmo tempo, exausta pelas metas.",
   },
   {
     num: "04",
-    title: "Quem somos nós nesses dados",
-    desc: "Painel sobre representatividade, viés e o lugar das mulheres na construção dos sistemas que moldam o mundo.",
+    title: "Quem constrói os sistemas",
+    desc: "Data Feminism reescrevendo narrativas, protagonismo feminino na Web3, investigação digital e uma mesa redonda sobre representatividade.",
   },
 ];
 
@@ -126,7 +126,8 @@ export default function Tema() {
             }}
           >
             Dados são o substrato — IA e cloud são a forma. Esta edição olha
-            para onde elas se encontram.
+            para onde elas se encontram: da bioinformática ao Data Feminism, do
+            Copilot à Web3.
           </p>
         </div>
 

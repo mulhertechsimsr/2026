@@ -178,8 +178,8 @@ export default function Hero() {
           {/* Meta grid */}
           <div className="hero-meta">
             <HeroMeta label="QUANDO" value="01 de agosto, sáb" />
-            <HeroMeta label="ONDE" value="[Em breve]" />
-            <HeroMeta label="DURAÇÃO" value="09h às 19h" />
+            <HeroMeta label="ONDE" value="Centro de Convenções Cidade Viva" />
+            <HeroMeta label="DURAÇÃO" value="09h às 17h" />
             <HeroMeta label="FORMATO" value="Presencial" />
           </div>
         </div>

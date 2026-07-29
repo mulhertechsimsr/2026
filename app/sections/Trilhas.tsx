@@ -4,26 +4,31 @@ import Button from "@/components/Button";
 const TRILHAS = [
   {
     tag: "TRILHA 01",
-    title: "Engenharia de Dados",
-    desc: "Pipelines, modelagem, qualidade. Da ingestão ao consumo.",
+    title: "Dados & Engenharia",
+    desc: "Do pipeline ao portfólio: IA generativa na engenharia de dados, bioinformática e narrativas reescritas com Data Feminism.",
+    speakers: "Bianca Amorim · Geovana Bezerra · Taty e Amanda Calixto",
     color: "var(--coral-500)",
   },
   {
     tag: "TRILHA 02",
-    title: "IA aplicada",
-    desc: "Casos reais de modelos em produção — sem mistério, com método.",
+    title: "IA na prática",
+    desc: "A nuvem que sustenta os modelos, Copilot no fluxo de trabalho, IA como aliada de QA e o design da empatia sintética.",
+    speakers: "Simara Conceição · Sulamita Dantas · Dayane Felix · Rebecca Tatini",
     color: "var(--teal-500)",
   },
   {
     tag: "TRILHA 03",
-    title: "Cloud & Infra",
-    desc: "Arquitetura, FinOps, segurança e o que sustenta o resto.",
+    title: "Carreira, Web3 & Segurança",
+    desc: "Estratégia para o mercado global, protagonismo feminino na Web3, investigação digital e exaustão sob pressão de metas.",
+    speakers:
+      "Maria Luiza Lyra e Izabelle Amaro · Ana Clara Fabião · Nicolle Garrido · Lorraine Oliveira",
     color: "var(--pink-500)",
   },
   {
-    tag: "WORKSHOPS",
-    title: "Mãos no código",
-    desc: "Atividades práticas e limitadas. Inscrição separada na sua conta.",
+    tag: "MÃO NA MASSA",
+    title: "Workshop & Code Game",
+    desc: "Workshop de engenharia de dados com ferramentas open source e o Code Game rolando direto das 10:10 ao almoço.",
+    speakers: "Gisele Fonseca · Vagas limitadas, inscrição à parte",
     color: "var(--coral-400)",
   },
 ];
@@ -66,7 +71,7 @@ export default function Trilhas() {
                 color: "white",
               }}
             >
-              Três trilhas,
+              Quatro espaços,
               <br />
               um sábado inteiro.
             </h2>
@@ -134,12 +139,15 @@ export default function Trilhas() {
               <div
                 style={{
                   marginTop: 24,
-                  fontSize: 13,
-                  fontWeight: 700,
-                  color: t.color,
+                  paddingTop: 16,
+                  borderTop: `1px solid ${t.color}`,
+                  fontFamily: "var(--font-mono)",
+                  fontSize: 12,
+                  lineHeight: 1.5,
+                  color: "rgba(255,255,255,0.55)",
                 }}
               >
-                Em breve: palestrantes →
+                {t.speakers}
               </div>
             </div>
           ))}
@@ -162,8 +170,9 @@ export default function Trilhas() {
         >
           <span style={{ fontSize: 24 }}>📌</span>
           <span>
-            A programação detalhada — palestrantes, horários e descrições — será
-            divulgada conforme as confirmações chegarem.
+            São 12 sessões e 14 palestrantes distribuídas em quatro espaços
+            simultâneos. Workshop e Code Game têm vagas limitadas e inscrição
+            separada da inscrição no evento.
           </span>
         </div>
       </div>

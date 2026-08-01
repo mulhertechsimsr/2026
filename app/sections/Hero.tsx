@@ -179,7 +179,7 @@ export default function Hero() {
           <div className="hero-meta">
             <HeroMeta label="QUANDO" value="01 de agosto, sáb" />
             <HeroMeta label="ONDE" value="Centro de Convenções Cidade Viva" />
-            <HeroMeta label="DURAÇÃO" value="09h às 17h" />
+            <HeroMeta label="DURAÇÃO" value="08h às 17h" />
             <HeroMeta label="FORMATO" value="Presencial" />
           </div>
         </div>

@@ -8,7 +8,7 @@ const INFO = [
   { label: "ENDEREÇO", value: "Centro de Convenções Cidade Viva" },
   { label: "CIDADE", value: "João Pessoa, PB" },
   { label: "QUANDO", value: "Sábado, 01 de agosto de 2026" },
-  { label: "HORÁRIO", value: "09h às 17h" },
+  { label: "HORÁRIO", value: "08h às 17h" },
 ];
 
 export default function Local() {

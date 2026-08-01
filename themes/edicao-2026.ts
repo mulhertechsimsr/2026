@@ -7,8 +7,8 @@ export const edicao2026 = {
   eventDateShort: "01 AGO",
   eventDayLabel: "Sábado, 01 de agosto de 2026",
   location: "João Pessoa, PB",
-  timeRange: "09h às 19h",
-  format: "Presencial + transmissão",
+  timeRange: "08h às 17h",
+  format: "Presencial",
   editionNumber: "11ª Edição",
   theme: "Dados",
 

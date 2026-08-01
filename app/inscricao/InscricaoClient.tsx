@@ -568,7 +568,7 @@ function StepResumo({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         <SummaryRow label="EVENTO" value="MTSS · 11ª Edição" highlight />
         <SummaryRow label="DATA" value="Sábado, 01 de agosto de 2026" />
-        <SummaryRow label="HORÁRIO" value="09:00 às 17:00" />
+        <SummaryRow label="HORÁRIO" value="08:00 às 17:00" />
         <SummaryRow
           label="LOCAL"
           value="Centro de Convenções Cidade Viva · João Pessoa, PB"

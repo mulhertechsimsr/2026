@@ -2,6 +2,29 @@ import Link from "next/link";
 import SectionHeader from "@/components/SectionHeader";
 import Button from "@/components/Button";
 
+interface Logo {
+  nome: string;
+  arquivo: string;
+  /** Arte só disponível em traço branco — precisa ser invertida no tile claro */
+  negativa?: boolean;
+}
+
+/** Marcas em `public/patrocinadores/`, em ordem alfabética — sem hierarquia de cotas. */
+const LOGOS: Logo[] = [
+  { nome: "Bybit", arquivo: "bybit.svg" },
+  { nome: "cloud++", arquivo: "cloud-plus-plus.png" },
+  { nome: "FIAP", arquivo: "fiap.svg" },
+  { nome: "GFT Technologies", arquivo: "gft-technologies.png" },
+  { nome: "Governo da Paraíba", arquivo: "governo-paraiba.png" },
+  { nome: "Growdev", arquivo: "growdev.png" },
+  // Só temos o arquivo em negativo (traço branco) — invertido via CSS
+  { nome: "Ilha Tech", arquivo: "ilha-tech.svg", negativa: true },
+  { nome: "São Braz", arquivo: "sao-braz.svg" },
+  { nome: "Solana", arquivo: "solana.svg" },
+  { nome: "Superteam Brasil", arquivo: "superteam-brasil.svg" },
+  { nome: "Três Bê Delas", arquivo: "tres-be-delas.png" },
+];
+
 export default function Patrocinadores() {
   return (
     <section
@@ -25,6 +48,23 @@ export default function Patrocinadores() {
           align="left"
         />
 
+        <ul className="sponsor-grid" style={{ listStyle: "none" }}>
+          {LOGOS.map((logo) => (
+            <li key={logo.arquivo} className="sponsor-tile">
+              {/* <img> puro: os arquivos são SVG/PNG de marca, servidos como
+                  vieram — o otimizador do next/image não aceita SVG sem
+                  liberar `dangerouslyAllowSVG` no config. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`/patrocinadores/${logo.arquivo}`}
+                alt={logo.nome}
+                loading="lazy"
+                decoding="async"
+                className={logo.negativa ? "is-negativa" : undefined}
+              />
+            </li>
+          ))}
+        </ul>
 
         {/* Media kit CTA */}
         <div

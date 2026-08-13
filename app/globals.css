@@ -261,7 +261,37 @@ html {
 }
 .sponsor-grid {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+  margin-bottom: 56px;
+}
+/* Tile claro: as marcas chegam em versões positivas (tinta escura), que
+   sumiriam contra o roxo da seção. */
+.sponsor-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 132px;
+  padding: 24px 28px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.sponsor-tile:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+/* As artes chegam em escalas muito diferentes (o SVG da Bybit tem 87px de
+   largura, o da Solana 646px) — `contain` na caixa cheia normaliza todas. */
+.sponsor-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* Marca fornecida só em negativo (traço branco) — inverte para ler no tile claro */
+.sponsor-tile img.is-negativa {
+  filter: invert(1);
 }
 .hero-meta {
   display: grid;
@@ -376,6 +406,8 @@ html {
   .prog-group { gap: 12px 20px; }
   .prog-cards[data-cols="3"],
   .prog-cards[data-cols="4"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sponsor-grid { grid-template-columns: repeat(3, 1fr); }
+  .sponsor-tile { height: 112px; }
 }
 .countdown-box {
   background: var(--purple-800);
@@ -405,7 +437,8 @@ html {
   .trilhas-grid  { grid-template-columns: 1fr; }
   .footer-grid   { grid-template-columns: 1fr; gap: 32px; }
   .mediakit-grid { grid-template-columns: 1fr; }
-  .sponsor-grid  { grid-template-columns: repeat(2, 1fr); }
+  .sponsor-grid  { grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 40px; }
+  .sponsor-tile  { height: 96px; padding: 16px 18px; border-radius: 14px; }
 
   /* Mobile: uma coluna sempre — o horário vira cabeçalho da faixa */
   .prog-slot { grid-template-columns: 1fr; gap: 10px; }

@@ -165,7 +165,7 @@ export const PROGRAMACAO: Slot[] = [
       },
       {
         room: "sala02",
-        kind: "Palestra",
+        kind: "Mentoria",
         title: "Overclock Humano: substituível pela IA, exausta pelas metas",
         speakers: "Psicóloga Lorraine Oliveira",
       },
@@ -192,7 +192,7 @@ export const PROGRAMACAO: Slot[] = [
       },
       {
         room: "sala01",
-        kind: "Palestra",
+        kind: "Mentoria",
         title:
           "O Design da Empatia Sintética: como a IA está redesenhando a essência humana",
         speakers: "Rebecca Tatini",
